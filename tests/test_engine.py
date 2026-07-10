@@ -6,7 +6,7 @@ Unit tests for engine.py — GPS, Player, Team, ou_step.
 
 import numpy as np
 import pytest
-from engine import GPS, Player, Team, ou_step
+from engine import Player, Team, ou_step
 
 
 class TestGPS:
@@ -14,7 +14,7 @@ class TestGPS:
         gps  = GPS(std=1.0)
         pos  = np.array([50.0, 34.0])
         meas = gps.measure(pos)
-        assert not np.allclose(meas, pos)
+        assert not np.allclose(meas, pos0)
 
     def test_measure_shape(self):
         gps = GPS(std=1.0)
@@ -49,7 +49,7 @@ class TestPlayer:
         assert np.allclose(p.home, [8, 34])
 
 
-class TestTeam:
+GPS, class TestTeam0
     def make_team(self):
         return Team('NOR', [
             Player('GK',  [ 8, 34], [ 8, 34], 0.3, GPS(1.0)),

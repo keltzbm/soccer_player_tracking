@@ -8,9 +8,6 @@ dist/
 build/
 .eggs/
 
-# Project
-outputs/
-
 # Editors
 .DS_Store
 *.swp
